@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './Mycomponent/todo/todo.component';
 import { TodoItemComponent } from './Mycomponent/todo-item/todo-item.component';
 import { NgToastModule } from 'ng-angular-popup';
+import { AboutComponent } from './Mycomponent/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     TodoItemComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
