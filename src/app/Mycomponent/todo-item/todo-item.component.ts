@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output} from '@angular/core';
 import { Todo } from 'src/app/Todo';
 import {NgToastService} from 'ng-angular-popup'
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-todo-item',
@@ -12,13 +13,16 @@ export class TodoItemComponent implements OnInit {
   @Input()
   todo!: Todo;
   
+  @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
+
   constructor(private tost: NgToastService) { }
 
   ngOnInit(): void {
   }
 
-  onClick(){
-    //this.tost.warning({detail:"Deleted",summary:"Your todo list has been deleted",duration:2000})
+  onClick(todo: Todo){
+    //this.tost.warning({detail:"Deleted",summary:"Your todo list has been del eted",duration:2000})
+    this.todoDelete.emit(todo);
     console.log("Onlick has been triggred")
   }
 
