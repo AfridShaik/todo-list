@@ -18,7 +18,7 @@ export class TodoItemComponent implements OnInit {
   }
 
   onClick(){
-    this.tost.warning({detail:"Deleted",summary:"Your todo list has been deleted",duration:2000})
+    //this.tost.warning({detail:"Deleted",summary:"Your todo list has been deleted",duration:2000})
     console.log("Onlick has been triggred")
   }
 
